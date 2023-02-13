@@ -3,6 +3,8 @@ package Class;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Sorter {
 
@@ -28,96 +30,27 @@ public class Sorter {
             case 1:
                 System.out.println("Укажите минимальное значение RAM в МБ");
                 int RAM = _input.nextInt();
-                filterRAM(RAM, laptop);
+                System.out.println(laptop.stream().filter(element -> element.getRam() > RAM).collect(Collectors.toList()));
                 break;
             case 2:
                 System.out.println("Укажите минимальное значение памяти в МБ");
                 int memory = _input.nextInt();
-                filterMemory(memory, laptop);
+                System.out.println(laptop.stream().filter(element -> element.getMemorySize() > memory).collect(Collectors.toList()));
                 break;
             case 3:
-                System.out.println(
-                        "Укажите операционную систему цифрой\nWindows - 0\nLinux - 1\nMacOs - 2\nFreeBSD - 3\nDOS - 4");
+                System.out.println("Укажите операционную систему цифрой\nWindows - 0\nLinux - 1\nMacOs - 2\nFreeBSD - 3\nDOS - 4");
                 int OS = _input.nextInt();
-                filterOS(OS, laptop);
+                System.out.println(laptop.stream().filter(element -> element.getOS().ordinal() == OS).collect(Collectors.toList()));
                 break;
             case 4:
                 System.out.println(
                         "Укажите цвет ноутбука цифрой\nred - 0\ngreen - 1\nblue - 2\ngray - 3\nblack - 4\nwhite - 5");
-                int Color = _input.nextInt();
-                filterColor(Color, laptop);
+                int color = _input.nextInt();
+                System.out.println(laptop.stream().filter(element -> element.getColor().ordinal() == color).collect(Collectors.toList()));
                 break;
             default:
                 System.out.println("Type Error");
                 break;
         }
-    }
-
-    private static void filterRAM(int result, List<Laptop> laptop) {
-
-        List resulList = new ArrayList<>();
-
-        for (Laptop product : laptop) {
-
-            if (product.getRam() > result) {
-
-                resulList.add(product);
-
-            }
-        }
-
-        System.out.println(resulList);
-
-    }
-
-    private static void filterMemory(int result, List<Laptop> laptop) {
-
-        List resulList = new ArrayList<>();
-
-        for (Laptop product : laptop) {
-
-            if (product.getMemorySize() > result) {
-
-                resulList.add(product);
-
-            }
-        }
-
-        System.out.println(resulList);
-
-    }
-
-    private static void filterOS(int result, List<Laptop> laptop) {
-
-        List resulList = new ArrayList<>();
-
-        for (Laptop product : laptop) {
-
-            if (product.getOS().ordinal() == result) {
-
-                resulList.add(product);
-
-            }
-        }
-
-        System.out.println(resulList);
-
-    }
-
-    private static void filterColor(int result, List<Laptop> laptop) {
-
-        List resulList = new ArrayList<>();
-
-        for (Laptop product : laptop) {
-
-            if (product.getColor().ordinal() == result) {
-
-                resulList.add(product);
-
-            }
-        }
-
-        System.out.println(resulList);
-
     }
 }
