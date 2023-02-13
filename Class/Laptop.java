@@ -30,13 +30,13 @@ public class Laptop extends Product {
         OS system, int screen, int memory, int RAM) {
 
         super(name, SKU, price, ProductType.good, Unit.piece);
-        _color = color;
-        _brand = brand;
-        _operationSystem = system;
-        _screenSize = screen;
-        _memoryMain = memory;
-        _memoryRAM = RAM;
-        _serizal = SerialGUI.getSerialNumber();
+        this._color = color;
+        this._brand = brand;
+        this._operationSystem = system;
+        this._screenSize = screen;
+        this._memoryMain = memory;
+        this._memoryRAM = RAM;
+        this._serizal = SerialGUI.getSerialNumber();
 
     }
 

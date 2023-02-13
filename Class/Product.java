@@ -21,11 +21,11 @@ public class Product {
 
     public Product(String name, int SKU, float price, ProductType type, Unit unit) {
 
-        _name = name;
-        _SKU = SKU;
-        _price = price;
-        _type = type;
-        _unit = unit;
+        this._name = name;
+        this._SKU = SKU;
+        this._price = price;
+        this._type = type;
+        this._unit = unit;
 
     }
 
