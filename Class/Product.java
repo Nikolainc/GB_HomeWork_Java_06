@@ -15,7 +15,7 @@ public class Product {
     public String toString() {
 
         return String.format("= = = = = = = = =\nName: %s\nSKU: %s\nPrice: %s\nType: %s\nUnit: %s\n= = = = = = = = =", _name, 
-                _SKU, _price, _type, _unit);
+            _SKU, _price, _type, _unit);
 
     }
 

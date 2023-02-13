@@ -6,7 +6,7 @@ public class SerialGUI {
 
     public static long getSerialNumber() {
 
-        return _serialNumber += 1;
+        return _serialNumber += 131;
 
     }
 
