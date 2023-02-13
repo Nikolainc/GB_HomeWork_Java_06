@@ -1,9 +1,9 @@
 package Class;
 
 import Enum.ProductType;
-import Enum.UnitType;
+import Enum.Unit;
 import Enum.Color;
-import Enum.OperationSystemType;
+import Enum.OS;
 import Enum.Brand;
 
 public class Laptop extends Product {
@@ -13,23 +13,23 @@ public class Laptop extends Product {
     private int _screenSize;
     private int _memoryMain;
     private int _memoryRAM;
-    private OperationSystemType _operationSystem;
+    private OS _operationSystem;
     private long _serizal;
 
     @Override
     public String toString() {
 
         return String.format(
-                "\nName: %s\nBrand: %s\nSKU: %s\nColor: %s\nOS: %s\nMemory: %s MB\nRAM: %s MB\nScreen: %s inch\nSerial: %s\nPrice: %s RUB\nType: %s\nUnit: %s\n",
+                "\nName: %s\nBrand: %s\nSKU: %s\nColor: %s\nOS: %s\nMemory: %s GB\nRAM: %s MB\nScreen: %s inch\nSerial: %s\nPrice: %s RUB\nType: %s\nUnit: %s\n",
                 _name, _brand,_SKU, _color, _operationSystem, _memoryMain, _memoryRAM, _screenSize, _serizal, _price, _type,
                 _unit);
 
     }
 
     public Laptop(String name,int SKU, float price, Color color, Brand brand,
-        OperationSystemType system, int screen, int memory, int RAM) {
+        OS system, int screen, int memory, int RAM) {
 
-        super(name, SKU, price, ProductType.good, UnitType.piece);
+        super(name, SKU, price, ProductType.good, Unit.piece);
         _color = color;
         _brand = brand;
         _operationSystem = system;
@@ -72,7 +72,7 @@ public class Laptop extends Product {
 
     }
 
-    public OperationSystemType getOS() {
+    public OS getOS() {
 
         return _operationSystem;
 

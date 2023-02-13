@@ -1,6 +1,6 @@
 package Enum;
 
-public enum OperationSystemType {
+public enum OS {
 
     Windows,
     Linux,

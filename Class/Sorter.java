@@ -1,9 +1,7 @@
 package Class;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Sorter {
@@ -33,7 +31,7 @@ public class Sorter {
                 System.out.println(laptop.stream().filter(element -> element.getRam() > RAM).collect(Collectors.toList()));
                 break;
             case 2:
-                System.out.println("Укажите минимальное значение памяти в МБ");
+                System.out.println("Укажите минимальное значение памяти ЖД в ГБ");
                 int memory = _input.nextInt();
                 System.out.println(laptop.stream().filter(element -> element.getMemorySize() > memory).collect(Collectors.toList()));
                 break;

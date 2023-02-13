@@ -1,13 +1,13 @@
 package Class;
 
 import Enum.ProductType;
-import Enum.UnitType;
+import Enum.Unit;
 
 public class Product {
 
     protected float _price;
     protected ProductType _type;
-    protected UnitType _unit;
+    protected Unit _unit;
     protected String _name;
     protected int _SKU;
 
@@ -19,7 +19,7 @@ public class Product {
 
     }
 
-    public Product(String name, int SKU, float price, ProductType type, UnitType unit) {
+    public Product(String name, int SKU, float price, ProductType type, Unit unit) {
 
         _name = name;
         _SKU = SKU;
@@ -41,7 +41,7 @@ public class Product {
 
     }
 
-    public UnitType getUnit() {
+    public Unit getUnit() {
 
         return _unit;
 

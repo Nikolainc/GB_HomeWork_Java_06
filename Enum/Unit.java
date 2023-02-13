@@ -1,6 +1,6 @@
 package Enum;
 
-public enum UnitType {
+public enum Unit {
     
     piece,
     weight,
